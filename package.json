@@ -1,0 +1,9 @@
+{
+    "name": "Electron App",
+    "version": "1.0.0",
+    "main": "app.js",
+    "window": {
+        "width": 800,
+        "height": 600
+    }
+}

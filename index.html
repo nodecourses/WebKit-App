@@ -3,10 +3,73 @@
 <head>
     <meta charset="utf-8">
     <title>Hello World!</title>
+    <link rel="stylesheet" href="photon/css/photon.min.css">
+    <link rel="stylesheet" href="ui.css">
 </head>
 <body>
-    <h1>Hello World!</h1>
-    We are using Node.js <script>document.write(process.version)</script>
-    and Electron <script>document.write(process.versions['electron'])</script>.
+    <header class="toolbar toolbar-header">
+        <h1 class="title">ToDo App</h1>
+    </header>
+    <main>
+        <aside>
+            <ul class="list-group">
+                <li class="list-group-header">
+                    <input class="form-control" type="text" placeholder="Search for a List">
+                </li>
+                <li class="list-group-item">
+                    <div class="media-body">
+                        <strong>Tutorial List</strong>
+                    </div>
+                </li>
+                <li class="list-group-item">
+                    <div class="media-body">
+                        Another List
+                    </div>
+                </li>
+                <li class="list-group-item">
+                    <div class="media-body">
+                        <span class="icon icon-plus"></span>
+                        Create List
+                    </div>
+                </li>
+            </ul>
+        </aside>
+        <div class="main-app">
+            <section class="todo-create">
+                <form>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Your new task">
+                    </div>
+                </form>
+                <button class="btn btn-large btn-primary" type="button" name="virtual-submit">Add</button>
+                <button class="btn btn-large btn-default" type="button" name="virtual-reset">Reset</button>
+            </section>
+            <section>
+                <h3>Tutorial List</h3>
+                <table class="table-striped">
+                    <thead>
+                        <tr>
+                            <th>Content</th>
+                            <th>Created</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Cleaning the House</td>
+                            <td>10. November 2013</td>
+                        </tr>
+                        <tr>
+                            <td>Electron tutorial</td>
+                            <td>22. October 2015</td>
+                        </tr>
+                        <tr>
+                            <td>Another demo task</td>
+                            <td>23. October 2015</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </div>
+    </main>
 </body>
 </html>

@@ -1,0 +1,57 @@
+html {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+    -webkit-box-sizing: inherit;
+    -moz-box-sizing: inherit;
+    box-sizing: inherit;
+}
+
+html,
+body,
+main {
+    width: 100%;
+    height: 100%;
+}
+
+aside,
+.main-app {
+    float: left;
+}
+
+aside {
+    height: 100%;
+    width: 30%;
+    border-right: 1px solid #dedede;
+}
+
+.main-app {
+    width: 70%;
+}
+
+.main-app table {
+    border: 1px solid #dedede;
+    border-radius: 3px;
+}
+
+.main-app section {
+    width: 95%;
+    margin: 0 2.5%;
+    padding: 20px 0;
+    border-bottom: 1px solid #dedede;
+}
+
+.main-app section > h2,
+.main-app section > h3,
+.main-app section > h4,
+.main-app section > h5 {
+    margin-top: 0;
+}
+
+.main-app > section:last-of-type {
+    border-bottom: none;
+}

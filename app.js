@@ -1,9 +1,9 @@
 var app = require('app');
 var pkg = require('./package.json');
 var BrowserWindow = require('browser-window');
-require('crash-reporter').start();
-
 var mainWindow = null;
+
+require('crash-reporter').start();
 
 app.on('window-all-closed', function() {
     if (process.platform != 'darwin') {
@@ -12,11 +12,7 @@ app.on('window-all-closed', function() {
 });
 
 app.on('ready', function() {
-    mainWindow = new BrowserWindow({
-        width: pkg.window.width,
-        height: pkg.window.height
-    });
-
+    mainWindow = new BrowserWindow(pkg.window);
     mainWindow.loadUrl('file://' + __dirname + '/index.html');
     mainWindow.openDevTools();
 

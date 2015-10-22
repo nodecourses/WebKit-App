@@ -1,13 +1,21 @@
 {
-    "name": "Electron App",
-    "version": "1.0.0",
-    "main": "app.js",
-    "window": {
-        "width": 800,
-        "height": 600,
-        "min-width": 500,
-        "min-height": 200,
-        "accept-first-mouse": true,
-        "title-bar-style": "hidden"
-    }
+  "name": "MyApp",
+  "version": "1.0.0",
+  "main": "app.js",
+  "window": {
+    "width": 800,
+    "height": 600,
+    "min-width": 500,
+    "min-height": 200,
+    "accept-first-mouse": true,
+    "title-bar-style": "hidden"
+  },
+  "scripts": {
+    "package": "asar pack MyApp.app/Contents/Resources/app MyApp.app/Contents/Resources/app.asar && rm -rf MyApp.app/Contents/Resources/app",
+    "start": "electron .",
+    "build": "electron-packager . MyApp --ignore=node_modules/electron-*"
+},
+  "devDependencies": {
+    "electron-packager": "^5.1.0"
+  }
 }

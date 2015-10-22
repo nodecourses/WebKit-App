@@ -13,8 +13,11 @@ app.on('window-all-closed', function() {
 
 app.on('ready', function() {
     mainWindow = new BrowserWindow(pkg.window);
-    mainWindow.loadUrl('file://' + __dirname + '/index.html');
-    mainWindow.openDevTools();
+    mainWindow.loadUrl('file://' + __dirname + '/' + pkg.view);
+    
+    if(pkg.developer) {
+        mainWindow.openDevTools();
+    }
 
     mainWindow.on('closed', function() {
         mainWindow = null;

@@ -12,7 +12,7 @@
     "title-bar-style": "hidden"
   },
   "scripts": {
-    "package": "asar pack MyApp-darwin-x64/MyApp.app/Contents/Resources/app MyApp-darwin-x64/MyApp.app/Contents/Resources/app.asar && rm -rf MyApp-darwin-x64/MyApp.app/Contents/Resources/app",
+    "package": "asar pack MyApp-darwin-x64/MyApp.app/Contents/Resources/app/ MyApp-darwin-x64/MyApp.app/Contents/Resources/app.asar && rm -rf MyApp-darwin-x64/MyApp.app/Contents/Resources/app",
     "start": "electron .",
     "build": "electron-packager . MyApp --platform=darwin --arch=x64 --version=0.34.0"
 },
